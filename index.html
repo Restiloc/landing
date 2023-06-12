@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta description="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Restiloc - Vehicle expertise</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/ico/favicon-16x16.png">
+	<link rel="manifest" href="/static/ico/site.webmanifest">
+	<style>
+		:root {
+			--primary: #F8F8FC;
+			--secondary: #0F63C9;
+			--text-color: #F8F8FC;
+		}
+
+		[data-theme="dark"] {
+			--primary: #242B40;
+			--secondary: #464AA6;
+			--text-color: #F8F8FC;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: var(--primary);
+			font-family: 'Montserrat';
+			color: var(--text-color);
+			transition: All 0.5s ease;
+			height: 100vh;
+		}
+
+		.wrapper {
+			max-width: 1280px;
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+
+		.minimized-logo {
+			display: none;
+		}
+
+		header {
+			height: 20vh;
+			min-height: 120px;
+			max-height: 250px;
+			display: flex;
+			justify-content: center;
+		}
+
+		header .wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		header .wrapper div {
+			flex: 1;
+		}
+
+		header .wrapper .application__logo {
+			margin-left: 55px;
+		}
+
+		header .wrapper .application__logo img {
+			width: 30vw;
+			max-width: 215px;
+		}
+
+		header .wrapper .application__logo img.minimized-logo {
+			max-width: 120px;
+		}
+
+		header .wrapper .container {
+			display: flex;
+			justify-content: end;
+		}
+
+		header .wrapper .theme__switcher {
+			display: flex;
+			justify-content: end;
+			margin-right: 120px;
+			max-width: 50px;
+		}
+
+		header .wrapper .theme__switcher:hover {
+			cursor: pointer;
+		}
+
+		header .wrapper .theme__switcher img {
+			width: 35px;
+			height: 35px;
+		}
+
+		main {
+			background-color: var(--secondary);
+			min-height: 500px;
+			max-height: 50vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+		}
+
+		main .wrapper .application__presentation {
+			max-width: 482px;
+			flex: 1;
+			margin-left: 150px;
+			display: flex;
+			align-items: center;
+			padding: 1.4px;
+		}
+
+		main .wrapper .application__presentation .container {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		main .wrapper .container .app-title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 3.5rem;
+			line-height: 4.5rem;
+		}
+
+		main .wrapper .container .subtext {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+
+		main .wrapper .container .playstore__download {
+			margin-left: -15px;
+		}
+
+		main .wrapper .container .playstore__download img {
+			width: 218px;
+			height: 80px;
+		}
+
+		main .wrapper .application__illustration {
+			flex: 1;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+		}
+
+		main .wrapper .application__illustration img {
+			margin-right: 150px;
+			max-height: 80vh;
+		}
+
+		@media screen and (max-width: 1000px) {
+			main .wrapper {
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+				margin: 50px 20px 0 20px;
+			}
+
+			main .wrapper .application__presentation {
+				margin-left: 0;
+			}
+
+			main .wrapper .application__illustration {
+				justify-content: center;
+			}
+
+			main .wrapper .application__illustration img {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.logo-full {
+				display: none;
+			}
+
+			.minimized-logo {
+				display: block;
+			}
+
+			header .wrapper .application__logo {
+				margin-left: 0;
+			}
+
+			header .wrapper .theme__switcher {
+				margin-right: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body data-theme="dark">
+	<header class="header">
+		<div class="wrapper">
+			<div class="application__logo">
+				<img class="logo-full" src="/static/images/logo-full.svg" />
+				<img class="minimized-logo" src="/static/images/logo-minimized.svg" />
+			</div>
+			<div class="container">
+				<div class="theme__switcher" id="dark">
+					<img src="/static/images/dark.svg" data-theme="dark" data-next="light">
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrapper">
+			<div class="application__presentation">
+				<div class="container">
+					<div class="text_main app-title">Restiloc is the good choice.</div>
+					<div class="subtext">Simple and secure application for quality expertise. Download the app today !</div>
+					<a class="playstore__download" href='https://play.google.com/store/apps/details?id=com.restiloc'><img
+							alt='Get it on Google Play'
+							src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+				</div>
+			</div>
+			<div class="application__illustration">
+				<img src="/static/images/dark-iphone.svg" />
+			</div>
+		</div>
+	</main>
+
+	<script>
+		const switcher = document.querySelector(".theme__switcher");
+		const indicator = switcher.children[0];
+
+		const swap = () => {
+			let themeState = {
+				previous: indicator.dataset.theme,
+				next: indicator.dataset.next,
+			};
+			switcher.id = themeState.next;
+			indicator.dataset.theme = themeState.next;
+			indicator.dataset.next = themeState.previous;
+			indicator.src = indicator.src.replace(themeState.previous, themeState.next);
+			document.body.dataset.theme = themeState.next;
+			iphone(themeState.next);
+		};
+
+		const iphone = (theme) => {
+			document.querySelector(".application__illustration").querySelector('img').src = `/static/images/${theme}-iphone.svg`
+		}
+		
+		window.addEventListener('DOMContentLoaded', () => {
+			switcher.addEventListener("click", swap);
+		})
+	</script>
+
+</body>
+
+</html>
