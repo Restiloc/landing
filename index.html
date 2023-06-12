@@ -12,10 +12,10 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 		rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="/static/ico/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/static/ico/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/static/ico/favicon-16x16.png">
-	<link rel="manifest" href="/static/ico/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="./static/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./static/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./static/ico/favicon-16x16.png">
+	<link rel="manifest" href="./static/ico/site.webmanifest">
 	<style>
 		:root {
 			--primary: #F8F8FC;
@@ -208,12 +208,12 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="application__logo">
-				<img class="logo-full" src="/static/images/logo-full.svg" />
-				<img class="minimized-logo" src="/static/images/logo-minimized.svg" />
+				<img class="logo-full" src="./static/images/logo-full.svg" />
+				<img class="minimized-logo" src="./static/images/logo-minimized.svg" />
 			</div>
 			<div class="container">
 				<div class="theme__switcher" id="dark">
-					<img src="/static/images/dark.svg" data-theme="dark" data-next="light">
+					<img src="./static/images/dark.svg" data-theme="dark" data-next="light">
 				</div>
 			</div>
 		</div>
@@ -226,11 +226,11 @@
 					<div class="subtext">Simple and secure application for quality expertise. Download the app today !</div>
 					<a class="playstore__download" href='https://play.google.com/store/apps/details?id=com.restiloc'><img
 							alt='Get it on Google Play'
-							src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+							src='https://play.google.com/intl/en_us/badges./static/images/badges/en_badge_web_generic.png' /></a>
 				</div>
 			</div>
 			<div class="application__illustration">
-				<img src="/static/images/dark-iphone.svg" />
+				<img src="./static/images/dark-iphone.svg" />
 			</div>
 		</div>
 	</main>
@@ -253,7 +253,7 @@
 		};
 
 		const iphone = (theme) => {
-			document.querySelector(".application__illustration").querySelector('img').src = `/static/images/${theme}-iphone.svg`
+			document.querySelector(".application__illustration").querySelector('img').src = `./static/images/${theme}-iphone.svg`
 		}
 		
 		window.addEventListener('DOMContentLoaded', () => {
