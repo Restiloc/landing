@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-    base: "https://restiloc.github.io/landing/docs/",
+    base: "/landing/docs/",
     outDir: "../../docs",
     title: "Restiloc",
     lastUpdated: true,
